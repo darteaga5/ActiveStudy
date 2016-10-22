@@ -8,4 +8,9 @@
     "url": "https://github.com/darteaga5/NamaStudy"
   },
 
+  "main": "server.js",
+
+  "engines": {
+    "node": "0.10.x"
   }
+}
