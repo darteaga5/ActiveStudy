@@ -1,11 +1,18 @@
 {
-  "name": "NamaStudy",
-  "version": "0.0.1",
-  "author": "Daniel Arteaga, Jesus Beltran, Sophia Krause-Levy",
-  
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/darteaga5/NamaStudy"
-  },
+	"name": "namastudy",
+	"description": "Node to Heroku app",
 
-  }
+	"scripts": {
+		"start": "node server.js"
+	},
+
+	"main": "server.js",
+	
+	"dependencies": {
+		"express": "3.x"
+	},
+
+	"engines": {
+  		"node": "0.10.x"
+  	}
+}
