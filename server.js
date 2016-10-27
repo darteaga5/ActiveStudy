@@ -1,22 +1,4 @@
 
-
-
-// // make express look in the public directory for assets (css/js/img)
-// app.use(express.static(__dirname + '/public'));
-
-// // set the home page route
-// app.get('/', function(req, res) {
-
-//     // ejs render automatically looks in the views folder
-//     res.render('index');
-// });
-
-// app.listen(port, function() {
-//     console.log('Our app is running on http://localhost:' + port);
-// });
-
-
-
 var express = require('express');
 var app = express();
 
@@ -28,10 +10,9 @@ var port = process.env.PORT || 8080;
 // app.use(express.logger());
 // app.use(express.compress());
 
-// Return all pages in the /static directory
+// Return all pages in the /views directory
 // whenever they are requested at '/'
-// e.g., http://localhost:3000/index.html
-// maps to /static/index.html on this machine
+// e.g., http://localhost:80/index.html
 app.use(express.static(__dirname + '/views'));
 
 // Start the server
