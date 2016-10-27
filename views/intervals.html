@@ -1,39 +1,77 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
     <title>NamaStudy</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+
+    	img.img-responsive {
+    		height: 10%;
+    		width: 10%;
+    	}
+    	.header {
+    		align: center;
+    	}
+    	ul {
+    		width: 200px;
+    		margin: 0 auto;
+    		text-align: left;
+    		font-size: 20px;
+    	}
+    	.btn {
+    		font-size: 50px;
+    	}
+    	div.radio {
+    		width: 200px;
+    		margin: 0 auto;
+    		text-align: left;
+    		font-size: 17px;
+    	}
+    </style>
 </head>
 
 <body>
-<h1 style="color: red">This will be our main form where most of the apps functionality is displayed</h1>
-	<div class= "jumbotron">
-	<div>
+<div>
 		<div style="float: right">
-			World
+			<h4>Welcome Back, Jesus!</h4>
 		</div>
 		<div style="float: left">
-			Hello
+		<img class="img-responsive" src="http://www.iconsdb.com/icons/preview/gray/home-5-xxl.png">
 		</div>
 	</div>
-		<h1>NamaStudy</h1>
-		<p>Making studying a good habit, one assignment at a time.</p>
+
+	<div class= "jumbotron">
+		<h1 align="center">NamaStudy</h1>
+		<p align="center">Making studying a good habit, one assignment at a time.</p>
 	</div>
-
-<fieldset>
-	<form action="./timer.html" id="activityForm">
-		<input type="checkbox" name=""> Ride the bike for 200 yards <br>
-		<input type="checkbox" name=""> Jog for 100 yards <br>
-		<input type="checkbox" name=""> Walk for 200 steps <br>
-		<input type="submit" name="submit" value="next">
+		<div class="bg-info container-fluid" align="center">
+		<h2>Recommended activities for today:</h2>
+	<div class="radio">
+	  <label><input type="radio" name="optradio">Stretch Session</label>
+	</div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio">20min Nap</label>
+	</div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio">Jog 100 yards</label>
+	</div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio">15min Yoga Session</label>
+	</div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio">10 Pushups</label>
+	</div>
+		<br>
+		<div align="center">
+			<img  src="./images/namaste_log.png" alt="namaste_logo">
+			</div>
+	</div> <br>
+	<form action="./intervals.html" align="center">
+		<input class="btn btn-primary btn-lg" type="submit" name="submit" value="Set Intervals">
 	</form>
-</fieldset>
-	
-	<select form="activityForm">
-		<option>30 minutes</option>
-		<option>1 hour</option>
-		<option>1 hour and 30 minutes</option>
-	</select>
-
 </body>
+
+
+</html>
