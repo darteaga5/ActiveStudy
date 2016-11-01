@@ -27,7 +27,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700
@@ -58,6 +59,12 @@ a:active,
 a:focus,
 a:hover {
     color: #fec503
+}
+ul#past_activities {
+    width: 200px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 15px;
 }
 .img-centered {
     margin: 0 auto
