@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<style>
+    body{
+        padding: 10px;
+    }
+</style>
+
+<script>
+//http://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
+    //function to start the timer 
+    function startTimer(duration, display){
+        var start = Date.now(),
+                    diff,
+                    hours, 
+                    minutes,
+                    seconds;
+        
+        //create the timer
+        function timer() {
+            diff = duration - ((Date.now() - start)/1000 | 0);
+
+            minutes =((diff / 60) % 60) | 0;
+            seconds = (diff % 60) | 0;
+            
+            if(minutes > 60){
+                hours = (diff - minutes)/ 60 | 0;
+            }
+            else{
+                hours = 0;
+            }
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (diff <= 0) {
+                start = Date.now() + 1000;
+            }
+        };
+        timer();
+        setInterval(timer, 1000);
+    }   
+
+    //function to implement the timer
+    window.onload = function(){
+        var timeWork = getURLParameter('workintid') * 60;
+           alert(timeWork);
+           display = document.querySelector('#time');
+        startTimer(timeWork, display);
+    };
+
+    //function to get parameters passed in
+    function getURLParameter(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    }
+
+</script>
+
+    <head>
+        <meta charset="utf-8">
+        <title>NamaStudy</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class= "jumbotron">
+        <div>
+        <div class="row">
+            </div>
+                <h1>NamaStudy</h1>
+	            <p>Making studying a good habit, one assignment at a time.</p>
+            </div>
+        </div>
+        <div>Time Until Break: </div>
+        <div> <span id="time"></span> minutes!</div>
+    </body>
