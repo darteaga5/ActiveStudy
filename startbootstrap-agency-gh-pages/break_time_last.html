@@ -79,30 +79,16 @@
     <header>
         <div class="container">
             <div class="intro-text">
-            <h1>NamaStudy</h1>
-                <div class="intro-lead-in">Welcome Back, Jesus!</div>
+            <h1>Break Time!</h1>
+                
                     <div class="jumbotron">
-                        <h3>Past Activities:</h3>
-                        <ul id="past_activities">
-                            <li><a href="">Walk 200 steps</a></li>
-                            <li><a href="">Yoga stretches</a></li>
-                            <li><a href="">20 sit-ups</a></li>
-                        </ul>
-                        <h4>Choose an activity</h4>
-                        <div class="dropdown btn-group btn">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                          Activities
-                          <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Jog for a mile</a></li>
-                            <li><a href="#">Swim 50 yards</a></li>
-                            <li><a href="#">Stretch for 5 minutes</a></li>
-                          </ul>
-                        </div>
+                      
+                      <textarea name="log_info" form="log_form" placeholder="Please put your workout details here!"></textarea>
+                      <form id="log_form" action="index.html" method="post">
+                          <input class="btn-primary" type="submit" name="submit">
+                          <input class="btn-primary" type="button" name="skip" value="skip" onclick="window.location.href='index.html'">
+                      </form> 
                     </div>
-                <a href="#services" class="page-scroll btn btn-xl">Set Intervals</a>
-                </div>
     </header>
 
     <!-- jQuery -->

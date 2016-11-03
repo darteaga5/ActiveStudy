@@ -47,6 +47,9 @@ p {
 p.large {
     font-size: 16px
 }
+textarea {
+    color: black;
+}
 a,
 a.active,
 a:active,
