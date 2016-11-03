@@ -23,8 +23,8 @@
             minutes =((diff / 60) % 60) | 0;
             seconds = (diff % 60) | 0;
             
-            if(minutes > 60){
-                hours = (diff - minutes)/ 60 | 0;
+            if( diff > 3600){
+               hours = (diff - (minutes * 60))/ 3600 | 0;
             }
             else{
                 hours = 0;
@@ -46,10 +46,12 @@
     //function to implement the timer
     window.onload = function(){
         var timeWork = getURLParameter('workintid') * 60;
-           alert(timeWork);
            display = document.querySelector('#time');
         startTimer(timeWork, display);
     };
+    
+    //set time to switch to other page
+    setTimeout(function(){window.location.href='break.html'},getURLParameter('workintid')*60000);
 
     //function to get parameters passed in
     function getURLParameter(name) {
@@ -150,11 +152,16 @@
         <div class="container">
             <div class="intro-text">
                 <h1>Time Until Break</h1>
-                <h1> <span id="time"></span> minutes!</hi>
+                <h1> <span id="time"></span></h1>
             </div>
         </div>
-    </header> 
-    <body>
-    </body>
+        <form action="pickinterval.html">
+           <h3> <input type="submit" value="Reset Intervals" /></h3>
+        </form>
+        <form action="break.html">
+           <h3> <input type="submit" value="Take Break Now" /></h3>
+            <p>Try to stick to your planned intervals</p>
+        </form>
+    </header>
 
 </html>
