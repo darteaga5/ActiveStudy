@@ -103,3 +103,11 @@ gulp.task('sass', function() {
             stream: true
         }))
 });
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: 'path/',
+    port: process.env.PORT || 8080, // localhost:5000
+    livereload: false
+  });
+});
