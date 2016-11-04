@@ -31,6 +31,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body id="page-top" class="index">
@@ -56,7 +59,7 @@
                         <a class="page-scroll" href="index.html">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="study.html">Study</a>
+                        <a class="page-scroll" href="pickintervals.html">Study</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="break.html">Break</a>
@@ -80,10 +83,41 @@
             <div class="intro-text">
                 <div class="intro-heading">Break Time</div>
                 <div class="intro-lead-in">What activites would you like to do today?</div>
-                
-                
+                <div class="dropdown btn-group">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Yoga/Stretches 
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Child Pose</a></li>
+                            <li><a href="#">Warrior I</a></li>
+                            <li><a href="#">Downward Facing Dog</a></li>
+                        </ul>
+                    </div>
+                <br>
+                <br>
+                <div class="dropdown btn-group">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ab Exercises 
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Prone Plank</a></li>
+                        <li><a href="#">Windshield Wiper</a></li>
+                        <li><a href="#">Bicycle Crunch</a></li>
+                    </ul>
+                </div>
+                <br>
+                <br>
+                <div class="dropdown btn-group">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Walk/Jog
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1000 Steps</a></li>
+                        <li><a href="#">2000 Steps</a></li>
+                        <li><a href="#">3000 Steps</a></li>
+                    </ul>
+                </div>
 
-
+                <br>
+                <br>
+                <br>
                 <a href="timer.html" class="page-scroll btn btn-xl">Start</a>
             </div>
         </div>
@@ -105,6 +139,12 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+      <script>
+            $(document).ready(function(){
+                $(".dropdown-toggle").dropdown();
+            });
+            </script>
 
 </body>
 
