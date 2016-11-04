@@ -55,7 +55,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html">Login</a>
+                        <a class="page-scroll" href="login.html">Login</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="pickintervals.html">Study</a>
@@ -65,9 +65,6 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="timer.html">Timer</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#">Misc</a>
                     </li>
                 </ul>
             </div>
@@ -90,18 +87,20 @@
                             <li><a href="">Yoga stretches</a></li>
                             <li><a href="">20 sit-ups</a></li>
                         </ul>
-                        <h4>Choose an activity</h4>
-                        <div class="dropdown btn-group btn">
+                        <!-- <h4>Choose an activity</h4> -->
+
+                        <!-- <div class="dropdown btn-group btn">
                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                           Activities
                           <span class="caret"></span>
                           </button>
-                          <ul class="dropdown-menu">
+                          <ul id="activity_dp" class="dropdown-menu">
                             <li><a href="#">Jog for a mile</a></li>
                             <li><a href="#">Swim 50 yards</a></li>
                             <li><a href="#">Stretch for 5 minutes</a></li>
                           </ul>
-                        </div>
+                        </div> -->
+
                     </div>
                 <a href="pickintervals.html" class="page-scroll btn btn-xl">Set Intervals</a>
                 </div>
@@ -122,6 +121,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+<!--     <script type="text/javascript">
+        $(function(){
+
+            $(".dropdown-menu li a").click(function(){
+
+              $(".btn:first-child").text($(this).text());
+              $(".btn:first-child").val($(this).text());
+
+           });
+
+        });
+    </script> -->
 
 </body>
 

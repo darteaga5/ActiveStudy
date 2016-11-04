@@ -3,6 +3,8 @@
 
 <head>
 
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +25,10 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
+
+    <style type="text/css">
+
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +62,7 @@
                         <a class="page-scroll" href="login.html">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="study.html">Study</a>
+                        <a class="page-scroll" href="pickintervals.html">Study</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="break.html">Break</a>
@@ -71,17 +77,32 @@
         <!-- /.container-fluid -->
     </nav>
 
+
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="form_container">
             <div class="intro-text">
-                <div class="intro-heading">TIMER</div>
-                <div class="intro-lead-in">Your remaing time:</div>
-                <a href="timer.html" class="page-scroll btn btn-xl">Stop</a>
-            </div>
-        </div>
+            <h1>NamaStudy</h1>
+                <div class="intro-lead-in">Making studying a good habit, one assignment at a time</div>
+                    <div class="jumbotron">
+                        
+                      <form action="index.html">
+                          <table align="center">
+                            <tr>
+                              <td align="right">User Name:</td>
+                              <td align="left"><input class="login" type="text" name="first" /></td>
+                            </tr>
+                            <tr>
+                              <td align="right">Password:</td>
+                              <td align="left"><input class="login" type="password" name="pswd" /></td>
+                            </tr>
+                          </table>
+                          <br>
+                          <input class="btn-primary btn-lg" align="center" type="submit" value="Login"></input>
+                        </form>
+                    </div>
+                </div>
     </header>
-
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -98,6 +119,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+<!--     <script type="text/javascript">
+        $(function(){
+
+            $(".dropdown-menu li a").click(function(){
+
+              $(".btn:first-child").text($(this).text());
+              $(".btn:first-child").val($(this).text());
+
+           });
+
+        });
+    </script> -->
 
 </body>
 
