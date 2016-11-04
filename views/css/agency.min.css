@@ -47,7 +47,8 @@ p {
 p.large {
     font-size: 16px
 }
-textarea {
+textarea,
+ .login{
     color: black;
 }
 a,
