@@ -1,0 +1,14 @@
+{
+	"users":[
+		{
+			"userName":	"gandhiOG",
+			"firstName":	"Mahatma",
+			"lastName":	"Gandhi",
+			"activities":	{
+				"yoga": "Child Pose",
+				"abs": "Prone Plank",
+				"walk" "3000 Steps"
+			}
+		}
+	]
+}
