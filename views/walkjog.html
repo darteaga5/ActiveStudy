@@ -3,8 +3,6 @@
 
 <head>
 
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +30,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -73,46 +74,37 @@
         <!-- /.container-fluid -->
     </nav>
 
-
     <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
-            <h1>NamaStudy</h1>
-                <div class="intro-lead-in">Welcome Back, Jesus!</div>
-                    <div class="jumbotron">
-                       <!-- <h3>Past Activities:</h3>
-                        <ul id="past_activities">
-                            <li><a href="">Walk/Jog</a></li>
-                            <li><a href="">Yoga/Stretches</a></li>
-                            <li><a href="">Abs</a></li>
-                        </ul>-->
-                        <!-- <h4>Choose an activity</h4> -->
-
-                        <!-- <div class="dropdown btn-group btn">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                          Activities
-                          <span class="caret"></span>
-                          </button>
-                          <ul id="activity_dp" class="dropdown-menu">
-                            <li><a href="#">Jog for a mile</a></li>
-                            <li><a href="#">Swim 50 yards</a></li>
-                            <li><a href="#">Stretch for 5 minutes</a></li>
-                          </ul>
-                        </div> -->
-                        <h4># of past breaks: (add breaks)</h4>
-                        <h4># of past Work Intervals: (add)</h4>
-                        <h4>Most used break Activity: (add)</h4>
-                        <h4> Most used intervals (add) </h4>
-
-                    </div>
-                <h4>Choose Activity Category:</h4>
-               
+               <!-- <div class="intro-heading">Choose Activity</div>-->
+                <font size="6">Walking & Jogging Activities</font>
                 </br>
                 </br>
-                <a href="choose_activity.html" class="page-scroll btn btn-xl">Choose Activity</a>
-                </div>
+                <font size="3">Check the box of the exercise to complete during your break</font>
+                </br>
+                </br>
+                <!-- 1000 steps -->
+                <font size ="5"><label><input type="checkbox" id ="chkbx_dog"> 1000 steps </label></font>
+                </br>
+                </br>
+
+                <!-- 2000 steps -->
+                <font size ="5"><label><input type="checkbox" id ="chkbx_dog"> 2000 steps </label></font>
+                 </br>
+                 </br>
+
+                <!-- 3000 steps -->
+                <font size ="5"> <label> <input type="checkbox" id ="chkbx_dog"> 3000 steps </label></font>
+                </br>
+                </br>
+
+                <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
+            </div>
+        </div>
     </header>
+
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -130,19 +122,34 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-<!--     <script type="text/javascript">
-        $(function(){
+      <script>
+            $(document).ready(function(){
+                $(".dropdown-toggle").dropdown();
+            });
 
-            $(".dropdown-menu li a").click(function(){
+             $(function(){
 
-              $(".btn:first-child").text($(this).text());
-              $(".btn:first-child").val($(this).text());
+            $("#dp1 li a").click(function(){
+
+              $(".dp1:first-child").text($(this).text());
+              $(".dp1:first-child").val($(this).text());
+
+           });
+
+            $("#dp2 li a").click(function(){
+
+              $(".dp2:first-child").text($(this).text());
+              $(".dp2:first-child").val($(this).text());
+
+           });
+
+            $("#dp3 li a").click(function(){
+
+              $(".dp3:first-child").text($(this).text());
+              $(".dp3:first-child").val($(this).text());
 
            });
 
         });
-    </script> -->
-
-</body>
-
+      </script>
 </html>
