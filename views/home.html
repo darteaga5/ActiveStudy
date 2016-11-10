@@ -86,7 +86,7 @@
                         <h4>Most used break Activity: (add)</h4>
                     </div>
                 <div class="dropdown btn-group">
-                    <button class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">
+                    <button id="ddlist" class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">
                     Select Activity Category <span class="caret"></span></button>
                     <ul id="ddactivity" class="dropdown-menu">
                         <li value="0"><a href="#">Yoga/Stretching</a></li>
@@ -118,27 +118,38 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-<script type="text/javascript">
+    <script type="text/javascript">
         
-        $(function(){
+        //Function for dropdown and switching where the "Choose Activity" button links to
+        $(".dropdown-menu li a").click(function(){
+            
+            //allows user to choose from dropdown and have selected choice shown
+            $(".btn:first-child").text($(this).text());
+            $(".btn:first-child").val($(this).text());
 
-            $(".dropdown-menu li a").click(function(){
+            //set val to the value of the dropdown
+            var val = $(".btn:first-child").val();
 
-              $(".btn:first-child").text($(this).text());
-              $(".btn:first-child").val($(this).text());
-              var val = $(".btn:first-child").val();
-              if(val == "Yoga/Stretching" ){
-                  document.getElementById("toactivity").href="yoga.html";
-              }
-              else if(val == "Abs"){
-                  document.getElementById("toactivity").href="abs.html";
-              }
-              else{
-                  document.getElementById("toactivity").href="walkjog.html";
-              }
-           });
-
+            //set the "Choose Activity" button href to the appropriate page based on dropdown choice
+            if(val == "Yoga/Stretching" ){
+                document.getElementById("toactivity").href="yoga.html";
+            }
+            else if(val == "Abs"){
+                document.getElementById("toactivity").href="abs.html";
+            }
+            else{
+                document.getElementById("toactivity").href="walkjog.html";
+            }
         });
+
+//        $("#ddlist").click(function(){
+//        alert("hi");
+//            if(val == "Select Activity Category" ){
+//                alert("You must choose an activity category to continue");
+//                document.getElementById("toactivity").href="home.html"    
+//            }
+//        });
+
     </script>
 </body>
 </html>
