@@ -14,7 +14,7 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   /* webkit-tap-highlight-color: #fed136*/
+   /* webkit-tap-highlight-color: #1194A9*/
     background-image: url(../img/flower.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -38,7 +38,7 @@ a {
 }
 .text-primary,
 a {
-    color: #fed136
+    color: #1194A9
 }
 p {
     font-size: 14px;
@@ -62,7 +62,7 @@ a.active,
 a:active,
 a:focus,
 a:hover {
-    color: #fec503
+    color: #1194A9
 }
 ul#past_activities {
     width: 200px;
@@ -81,8 +81,8 @@ ul#past_activities {
 }
 .btn-primary {
     color: #fff;
-    background-color: #fed136;
-    border-color: #fed136
+    background-color: #1194A9;
+    border-color: #1194A9
 }
 .btn-primary.active,
 .btn-primary:active,
@@ -90,8 +90,8 @@ ul#past_activities {
 .btn-primary:hover,
 .open .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #fec503;
-    border-color: #f6bf01
+    background-color: #1194A9;
+    border-color: #1194A9
 }
 .btn-primary.disabled,
 .btn-primary.disabled.active,
@@ -108,17 +108,17 @@ fieldset[disabled] .btn-primary.active,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
-    background-color: #fed136;
-    border-color: #fed136
+    background-color: #1194A9;
+    border-color: #1194A9
 }
 .btn-primary .badge {
-    color: #fed136;
-    background-color: #fff
+    color: #1194A9;
+    background-color: #1194A9
 }
 .btn-xl {
     color: #fff;
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #1194A9;
+    border-color: #1194A9;
     border-radius: 3px;
     font-size: 18px;
     padding: 20px 40px
@@ -129,7 +129,7 @@ fieldset[disabled] .btn-primary:hover {
 .btn-xl:hover,
 .open .dropdown-toggle.btn-xl {
     color: #fff;
-    background-color: #fec503;
+    background-color: #1194A9;
     border-color: #f6bf01
 }
 .btn-xl.disabled,
@@ -147,26 +147,26 @@ fieldset[disabled] .btn-xl.active,
 fieldset[disabled] .btn-xl:active,
 fieldset[disabled] .btn-xl:focus,
 fieldset[disabled] .btn-xl:hover {
-    background-color: #fed136;
-    border-color: #fed136
+    background-color: #1194A9;
+    border-color: #1194A9
 }
 .btn-xl .badge {
-    color: #fed136;
-    background-color: #fff
+    color: #1194A9;
+    background-color: #1194A9
 }
 .navbar-custom {
-    background-color: #222;
+    background-color: #222; /*This is the color for the navbar up top*/
     border-color: transparent
 }
 .navbar-custom .navbar-brand {
-    color: #fed136;
+    color: #1194A9;
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
 }
 .navbar-custom .navbar-brand.active,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:hover {
-    color: #fec503
+    color: #1194A9
 }
 .navbar-custom .nav li a,
 .navbar-custom .navbar-toggle {
@@ -178,13 +178,13 @@ fieldset[disabled] .btn-xl:hover {
     border-color: rgba(255, 255, 255, .02)
 }
 .navbar-custom .navbar-toggle {
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #1194A9; /*Changes the color of the menu button*/
+    border-color: #1194A9;
     font-size: 12px
 }
 .navbar-custom .navbar-toggle:focus,
 .navbar-custom .navbar-toggle:hover {
-    background-color: #fed136
+    background-color: #1194A9
 }
 .navbar-custom .nav li a {
     font-weight: 400;
@@ -192,18 +192,18 @@ fieldset[disabled] .btn-xl:hover {
 }
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:hover {
-    color: #fed136;
+    color: #1194A9;
     outline: 0
 }
 .navbar-custom .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: #fed136
+    background-color: #1194A9;
 }
 .navbar-custom .navbar-nav>.active>a:focus,
 .navbar-custom .navbar-nav>.active>a:hover {
     color: #fff;
-    background-color: #fec503
+    background-color: #1194A9;
 }
 @media (min-width: 768px) {
     .navbar-custom {
@@ -290,11 +290,11 @@ header .intro-text .intro-heading {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136
+    background: #1194A9
 }
 ::selection {
     text-shadow: none;
-    background: #fed136
+    background: #1194A9
 }
 img::selection {
     background: 0 0
