@@ -47,7 +47,7 @@
     };
     
     //set time to switch to other page
-    setTimeout(function(){window.location.href='break.html'},getURLParameter('workintid')*60000);
+    setTimeout(function(){window.location.href='startbreak.html'},getURLParameter('workintid')*60000);
 
     //function to get parameters passed in
     function getURLParameter(name) {

@@ -79,23 +79,13 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-heading">Break Time</div>
+                </br>
+                </br>
                 <h3>You chose _____ as your break activity</h3>
                 <h3>Your break is __:__ minutes</h3>
-            <div class="dropdown btn-group">
-                <button id="ddlist" class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">
-                Select Activity Category <span class="caret"></span></button>
-                 <ul id="ddactivity" class="dropdown-menu">
-                    <li value="0"><a href="#">Yoga/Stretching</a></li>
-                    <li value="1"><a href="#">Abs</a></li>
-                    <li value="2"><a href="#">Walking/Jogging</a></li>
-                 </ul>
             </div>
-                <br>
-                <br>
-                 <a href="timer.html" class="page-scroll btn btn-xl">Begin</a>
-                <br>
-                <br>
-                <br>
+                </br>
+                </br>
                 <a href="timer.html" class="page-scroll btn btn-xl">Begin</a>
             </div>
         </div>
@@ -117,32 +107,6 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-
-    <script type="text/javascript">
-          
-        //Function for dropdown and switching where the "Choose Activity" button links to
-        $(".dropdown-menu li a").click(function(){
-                       
-            //allows user to choose from dropdown and have selected choice shown
-            $(".btn:first-child").text($(this).text());
-            $(".btn:first-child").val($(this).text());
-         
-            //set val to the value of the dropdown
-            var val = $(".btn:first-child").val();
-        
-            //set the "Choose Activity" button href to the appropriate page based on dropdown choice
-            if(val == "Yoga/Stretching" ){
-                document.getElementById("toactivity").href="yoga.html";
-            }
-            else if(val == "Abs"){
-                document.getElementById("toactivity").href="abs.html";
-            }
-            else{
-                document.getElementById("toactivity").href="walkjog.html";
-            }
-        });
-
-      </script>
 
 </body>
 
