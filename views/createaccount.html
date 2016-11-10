@@ -59,7 +59,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html">Login</a>
+                        <a class="page-scroll" href="index.html">Logout</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="pickintervals.html">Study</a>
@@ -86,25 +86,53 @@
                 <div class="intro-lead-in">Making studying a good habit, one assignment at a time</div>
                     <div class="jumbotron">
                         
-                      <form action="index.html">
+                      <form id="create_account_form" action="index.html">
                           <table align="center">
                             <tr>
-                              <td align="left"><input class="login" type="text" name="first" placeholder=" Username" /></td>
+                              <td align="left"><input id="usr_name" class="login" type="text" name="first" placeholder=" Username" /></td>
                             </tr>
                             <tr>
-                              <td align="left"><input class="login" type="password" name="pswd" placeholder=" Password" /></td>
+                              <td align="left"><input class="login pswd" type="password" name="pswd" placeholder=" Password" /></td>
                             </tr>
                             <tr>
-                              <td align="left"><input class="login" type="password" name="pswd" placeholder=" Retype Password" /></td>
+                              <td align="left"><input class="login pswd" type="password" name="pswd" placeholder=" Retype Password" /></td>
                             </tr>
                           </table>
                           <br>
-                          <input class="btn-primary btn-lg" align="center" type="submit" value="Create acount"></input>
+                          <input id="create_button" class="btn-primary btn-lg" align="center" type="submit" value="Create acount" onclick="checkUsrNpass()"></input>
                         </form>
                     </div>
                 </div>
     </header>
 
+    <script type="text/javascript">
+        function checkUsrNpass(e) {
+            var usrName = $("#usr_name").val();
+            var button_account = document.getElementById("create_button");
+
+           if(!usrName) { //If user name is empty
+            alert("Please input a User Name");
+            button_account.setAttribute('type', 'button');
+        } else {
+            button_account.setAttribute('type', 'submit');
+        }
+
+        //Check if the passwords are the same
+        var passwd = document.getElementsByClassName("pswd");
+        if(passwd[0].value == '' || passwd[1].value == '') {
+            alert("Empty password");
+            button_account.setAttribute('type', 'button');
+        } else if(passwd[0].value != passwd[1].value) {
+            passwd[0].value = '';
+            passwd[1].value = '';
+            alert("Your password did not match");
+            button_account.setAttribute('type', 'button');
+        } else if(passwd[0].value == passwd[1].value) {
+            button_account.setAttribute('type', 'submit');
+        }
+
+    }
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
