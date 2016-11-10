@@ -3,6 +3,8 @@
 
 <head>
 
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +25,10 @@
 
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
+
+    <style type="text/css">
+
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,16 +59,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="description.html">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="###">Activity Log</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="index.html">Logout</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="pickintervals.html">Study</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="break.html">Break</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="timer.html">Timer</a>
                     </li>
                 </ul>
             </div>
@@ -74,19 +80,20 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-            <h1>Log your acitivity</h1>
-            <h4>e.g. 15 crunches, 20 pushups, 100 steps</h4>
-                    </br>
+        <div class="form_container">
+            <div class="intro-text"> 
+            <h2>What is Namastudy?</h2>
                     <div class="jumbotron">
-                      
-                      <textarea name="log_info" form="log_form" placeholder="Please put your workout details here!"></textarea>
-                      <form id="log_form" action="home.html">
-                          <input class="btn-primary" type="submit" name="submit">
-                          <input class="btn-primary" type="button" name="skip" value="skip" onclick="window.location.href='home.html'">
-                      </form> 
+                     <h4>Purpose</h4>
+                     <font size="4">This app was created to help people, mainly students, take healthy 
+                     and regular breaks during periods of work.</font>
+                     </br></br>
+                     <h4>How it works</h4>
+                     <font size="4">You choose how long you want to work and how long you want your breaks to be.
+                     Namastudy times your intervals and gives you healthy activities to complete during your breaks</font>
                     </div>
+            </div>
+        </div>
     </header>
 
     <!-- jQuery -->
@@ -104,6 +111,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+<!--     <script type="text/javascript">
+        $(function(){
+
+            $(".dropdown-menu li a").click(function(){
+
+              $(".btn:first-child").text($(this).text());
+              $(".btn:first-child").val($(this).text());
+
+           });
+
+        });
+    </script> -->
 
 </body>
 
