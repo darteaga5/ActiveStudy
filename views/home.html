@@ -78,40 +78,28 @@
     <header>
         <div class="container">
             <div class="intro-text">
-            <h1>NamaStudy</h1>
+                <h1>NamaStudy</h1>
                 <div class="intro-lead-in">Welcome Back, Jesus!</div>
                     <div class="jumbotron">
-                       <!-- <h3>Past Activities:</h3>
-                        <ul id="past_activities">
-                            <li><a href="">Walk/Jog</a></li>
-                            <li><a href="">Yoga/Stretches</a></li>
-                            <li><a href="">Abs</a></li>
-                        </ul>-->
-                        <!-- <h4>Choose an activity</h4> -->
-
-                        <!-- <div class="dropdown btn-group btn">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                          Activities
-                          <span class="caret"></span>
-                          </button>
-                          <ul id="activity_dp" class="dropdown-menu">
-                            <li><a href="#">Jog for a mile</a></li>
-                            <li><a href="#">Swim 50 yards</a></li>
-                            <li><a href="#">Stretch for 5 minutes</a></li>
-                          </ul>
-                        </div> -->
                         <h4># of past breaks: (add breaks)</h4>
                         <h4># of past Work Intervals: (add)</h4>
                         <h4>Most used break Activity: (add)</h4>
-                        <h4> Most used intervals (add) </h4>
-
                     </div>
-                <h4>Choose Activity Category:</h4>
+                <div class="dropdown btn-group">
+                    <button class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">
+                    Select Activity Category <span class="caret"></span></button>
+                    <ul id="ddactivity" class="dropdown-menu">
+                        <li value="0"><a href="#">Yoga/Stretching</a></li>
+                        <li value="1"><a href="#">Abs</a></li>
+                        <li value="2"><a href="#">Walking/Jogging</a></li>
+                    </ul>
+                </div>
                
                 </br>
                 </br>
-                <a href="choose_activity.html" class="page-scroll btn btn-xl">Choose Activity</a>
-                </div>
+                <a href="choose_activity.html" class="page-scroll btn btn-xl" id="toactivity">Choose Activity</a>
+            </div>
+        </div>
     </header>
 
     <!-- jQuery -->
@@ -130,19 +118,27 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-<!--     <script type="text/javascript">
+<script type="text/javascript">
+        
         $(function(){
 
             $(".dropdown-menu li a").click(function(){
 
               $(".btn:first-child").text($(this).text());
               $(".btn:first-child").val($(this).text());
-
+              var val = $(".btn:first-child").val();
+              if(val == "Yoga/Stretching" ){
+                  document.getElementById("toactivity").href="yoga.html";
+              }
+              else if(val == "Abs"){
+                  document.getElementById("toactivity").href="abs.html";
+              }
+              else{
+                  document.getElementById("toactivity").href="walkjog.html";
+              }
            });
 
         });
-    </script> -->
-
+    </script>
 </body>
-
 </html>
