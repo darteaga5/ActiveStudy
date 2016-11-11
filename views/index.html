@@ -149,7 +149,7 @@
                 document.getElementById("login_bttn").setAttribute('type', 'button');
                 //return false;
             } else {
-                curr_usr = JSON.parse(localStorage.getItem(login_name));
+                curr_usr = JSON.parse(localStorage.getItem('nama_user'));
                 if(curr_usr == null) {
                     alert("User does not exists");
                     document.getElementById("login_bttn").setAttribute('type', 'button');

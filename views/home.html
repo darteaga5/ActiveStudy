@@ -79,7 +79,7 @@
         <div class="container">
             <div class="intro-text">
                 <h1>NamaStudy</h1>
-                <div class="intro-lead-in">Welcome Back, Jesus!</div>
+                <h3 id="greet_user" value="HelloWorld">Welcome Back, Jesus!</h3>
                     <div class="jumbotron">
                         <h4># of past breaks: (add breaks)</h4>
                         <h4># of past Work Intervals: (add)</h4>
@@ -119,6 +119,9 @@
     <script src="js/agency.min.js"></script>
 
     <script type="text/javascript">
+        var usr = JSON.parse(localStorage.getItem('nama_user'));
+        alert(usr.userName);
+        alert(document.getElementById("greet_user").value);
         //Function for dropdown and switching where the "Choose Activity" button links to
         $(".dropdown-menu li a").click(function(){
             
@@ -148,6 +151,8 @@
                 document.getElementById("toactivity").href = '#';
             }
         }
+
+            
 
     </script>
 </body>
