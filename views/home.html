@@ -79,7 +79,7 @@
         <div class="container">
             <div class="intro-text">
                 <h1>NamaStudy</h1>
-                <div id="greet_user" class="intro-lead-in">Welcome Back, Jesus!</div>
+                <div id="greet_user" class="intro-lead-in">Welcome!</div>
                     <a href="activitylog.html" class="page-scroll btn btn-xl">view acitivty log</a>    
                     <h2>-OR-</h2>
                 <div class="dropdown btn-group">
@@ -116,12 +116,14 @@
     <script src="js/agency.min.js"></script>
 
     <script type="text/javascript">
-    
+    //localStorage.clear();
         for(var i in localStorage) {
         console.log(i + ' = ' + localStorage[i]);
     }
+
         var usr = JSON.parse(localStorage.getItem('nama_user'));
-        $("#greet_user").html("Welcome Back, " + usr.userName);
+        if(usr != null) $("#greet_user").html("Welcome Back, " + usr.userName);
+        else $("#greet_user").html("Welcome!");
         //Function for dropdown and switching where the "Choose Activity" button links to
         $(".dropdown-menu li a").click(function(){
             
