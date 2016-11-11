@@ -35,7 +35,7 @@
 
 <body id="page-top" class="index">
 
-       <!-- Navigation -->
+    <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -71,23 +71,39 @@
         <!-- /.container-fluid -->
     </nav>
 
-
     <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
-            <h1>Log your acitivity</h1>
-            <h4>e.g. 15 crunches, 20 pushups, 100 steps</h4>
-                    </br>
-                    <div class="jumbotron">
-                      
-                      <textarea name="log_info" form="log_form" placeholder="Please put your workout details here!"></textarea>
-                      <form id="log_form" action="home.html">
-                          <input class="btn-primary" type="submit" name="submit">
-                          <input class="btn-primary" type="button" name="skip" value="skip" onclick="window.location.href='home.html'">
-                      </form> 
-                    </div>
+               <!-- <div class="intro-heading">Choose Activity</div>-->
+                <font size ="6">Ab Workout Activities</font>
+                </br></br>
+                <font size="3">Check the box of the exercise to complete during your break</font>
+                </br> </br>
+                <!-- Prone Plank -->
+                <font size ="5"><label><input type="checkbox" id ="chkbx_plank"> Prone Plank</label></font>
+                </br>
+                <button type="button" class="text" data-toggle="modal" data-target="#plank"><u>click here for description</u></button>
+                </br> </br>
+                
+                <!-- Windshield Wiper -->
+                <font size ="5"><label><input type="checkbox" id ="chkbx_windshield"> Windshield Wiper</label></font>
+                </br>
+                <button type="button" class="text" data-toggle="modal" data-target="#windshield"><u>click here for description</u></button> 
+                </br></br>
+
+                <!-- Bicycle Crunches -->
+                <font size ="5"><label><input type="checkbox" id ="chkbx_bicycle"> Bicycle Crunches</label></font>
+                </br>
+                <button type="button" class="text" data-toggle="modal" data-target="#bicycle"><u>click here for description</u></button>
+                </br>
+                
+                </br>
+                <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
+            </div>
+        </div>
     </header>
+
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -106,5 +122,62 @@
     <script src="js/agency.min.js"></script>
 
 </body>
+
+<!--Prone Plank Modal -->
+<div id="plank" class="modal Fade" role="dialog">
+    <div class ="modal-dialog">
+        <!--Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button> 
+               <h4 class="modal-title">Prone Plank</h4>
+            </div>
+            <div class="modal-body">
+                <p>Pictures of exersize </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Windshield Wiper Modal -->
+<div id="windshield" class="modal Fade" role="dialog">
+    <div class ="modal-dialog">
+        <!--Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button> 
+               <h4 class="modal-title"> Windshield Wiper</h4>
+            </div>
+            <div class="modal-body">
+                <p>Pictures of exersize </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Bicycle Crunch Modal -->
+<div id="bicycle" class="modal Fade" role="dialog">
+    <div class ="modal-dialog">
+        <!--Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button> 
+               <h4 class="modal-title">Bicycle Crunch</h4>
+            </div>
+            <div class="modal-body">
+                <p>Pictures of exersize </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>

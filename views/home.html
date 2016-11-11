@@ -37,7 +37,7 @@
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,16 +55,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html">Login</a>
+                        <a class="page-scroll" href="home.html">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="pickintervals.html">Study</a>
+                        <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="break.html">Break</a>
+                        <a class="page-scroll" href="###">Activity Log</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="timer.html">Timer</a>
+                        <a class="page-scroll" href="index.html">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -78,32 +78,28 @@
     <header>
         <div class="container">
             <div class="intro-text">
-            <h1>NamaStudy</h1>
+                <h1>NamaStudy</h1>
                 <div class="intro-lead-in">Welcome Back, Jesus!</div>
                     <div class="jumbotron">
-                        <h3>Past Activities:</h3>
-                        <ul id="past_activities">
-                            <li><a href="">Walk 200 steps</a></li>
-                            <li><a href="">Yoga stretches</a></li>
-                            <li><a href="">20 sit-ups</a></li>
-                        </ul>
-                        <!-- <h4>Choose an activity</h4> -->
-
-                        <!-- <div class="dropdown btn-group btn">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                          Activities
-                          <span class="caret"></span>
-                          </button>
-                          <ul id="activity_dp" class="dropdown-menu">
-                            <li><a href="#">Jog for a mile</a></li>
-                            <li><a href="#">Swim 50 yards</a></li>
-                            <li><a href="#">Stretch for 5 minutes</a></li>
-                          </ul>
-                        </div> -->
-
+                        <h4># of past breaks: (add breaks)</h4>
+                        <h4># of past Work Intervals: (add)</h4>
+                        <h4>Most used break Activity: (add)</h4>
                     </div>
-                <a href="pickintervals.html" class="page-scroll btn btn-xl">Set Intervals</a>
+                <div class="dropdown btn-group">
+                    <button id="ddlist" class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">
+                    Select Activity Category <span class="caret"></span></button>
+                    <ul id="ddactivity" class="dropdown-menu">
+                        <li value="0"><a href="#">Yoga/Stretching</a></li>
+                        <li value="1"><a href="#">Abs</a></li>
+                        <li value="2"><a href="#">Walking/Jogging</a></li>
+                    </ul>
                 </div>
+               
+                </br>
+                </br>
+                <a href="choose_activity.html" class="page-scroll btn btn-xl" id="toactivity" onclick="checkValue()"">Choose Activity</a>
+            </div>
+        </div>
     </header>
 
     <!-- jQuery -->
@@ -122,19 +118,37 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-<!--     <script type="text/javascript">
-        $(function(){
+    <script type="text/javascript">
+        //Function for dropdown and switching where the "Choose Activity" button links to
+        $(".dropdown-menu li a").click(function(){
+            
+            //allows user to choose from dropdown and have selected choice shown
+            $(".btn:first-child").text($(this).text());
+           var val = $(".btn:first-child").val($(this).text()).val();
 
-            $(".dropdown-menu li a").click(function(){
+            //set val to the value of the dropdown
+            //var val = $(".btn:first-child").val();
 
-              $(".btn:first-child").text($(this).text());
-              $(".btn:first-child").val($(this).text());
-
-           });
-
+            //set the "Choose Activity" button href to the appropriate page based on dropdown choice
+            if(val == "Yoga/Stretching" ) {
+                document.getElementById("toactivity").href="yoga.html";
+            }
+            else if(val == "Abs") {
+                document.getElementById("toactivity").href="abs.html";
+            }
+            else if(val == "Walking/Joggin") {
+                document.getElementById("toactivity").href="walkjog.html";
+            } 
         });
-    </script> -->
 
+        function checkValue() {
+            var act_chosen = $(".btn:first-child").val();
+            if(act_chosen == '') {
+                alert("You didn't pick an option");
+                document.getElementById("toactivity").href = '#';
+            }
+        }
+
+    </script>
 </body>
-
 </html>
