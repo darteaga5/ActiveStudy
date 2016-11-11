@@ -134,6 +134,8 @@
 
     <script type="text/javascript">
 
+
+    //localStorage.clear();
         // for(var i in localStorage) {
         //     console.log(i + ' = ' + localStorage[i]);
         // }
@@ -149,7 +151,7 @@
                 //return false;
             } else {
                 curr_usr = JSON.parse(localStorage.getItem('nama_user'));
-                if(curr_usr == null) {
+                if(curr_usr.userName != login_name) {
                     alert("User does not exists");
                     document.getElementById("login_bttn").setAttribute('type', 'button');
                 } else if(curr_usr.userName == login_name) {
