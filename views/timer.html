@@ -1,65 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    body{
-        padding: 10px;
-    }
-</style>
-
-    <script>
-//http://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
-    //function to start the timer 
-    function startTimer(duration, display){
-        var start = Date.now(),
-                    diff,
-                    hours, 
-                    minutes,
-                    seconds;
-        
-        //create the timer
-        function timer() {
-            diff = duration - ((Date.now() - start)/1000 | 0);
-
-            minutes =((diff / 60) % 60) | 0;
-            seconds = (diff % 60) | 0;
-            
-            if( diff > 3600){
-               hours = (diff - (minutes * 60))/ 3600 | 0;
-            }
-            else{
-                hours = 0;
-            }
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = hours + ":" + minutes + ":" + seconds;
-
-            if (diff <= 0) {
-                start = Date.now() + 1000;
-            }
-        };
-        timer();
-        setInterval(timer, 1000);
-    }   
-
-    //function to implement the timer
-    window.onload = function(){
-        var timeWork = getURLParameter('breakid') * 60;
-           display = document.querySelector('#time');
-        startTimer(timeWork, display);
-    };
-    
-    //set time to switch to other page
-    setTimeout(function(){window.location.href='break.html'},getURLParameter('breakid')*60000);
-
-    //function to get parameters passed in
-    function getURLParameter(name) {
-        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
-    }
-</script>
-
 <head>
 
     <meta charset="utf-8">
@@ -89,6 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="./js/activity_timer.js"></script>
 
 </head>
 
@@ -102,7 +44,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">NamaStudy</a>
+                <a class="navbar-brand page-scroll" href="home.html">NamaStudy</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -115,16 +57,13 @@
                         <a class="page-scroll" href="index.html">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="study.html">Study</a>
+                        <a class="page-scroll" href="pickIntervals.html">Study</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="break.html">Break</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="timer.html">Timer</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="misc.html">Misc</a>
                     </li>
                 </ul>
             </div>
@@ -139,13 +78,8 @@
             <div class="intro-text">
                 <div class="intro-heading">TIMER</div>
                 <div class="intro-lead-in">Your remaing time:</div>
-                <div class="container">
-            <div class="intro-text">
-                <h1>Time Until Break</h1>
-                <h1> <span id="time"></span></h1>
-            </div>
-        </div>
-                <a href="timer.html" class="page-scroll btn btn-xl">Stop</a>
+                <h1> <span id="time_t"></span></h1>
+                <a href="break_time_last.html" class="page-scroll btn btn-xl">Stop</a>
             </div>
         </div>
     </header>
@@ -166,7 +100,6 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-
 
 </body>
 

@@ -46,7 +46,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">NamaStudy</a>
+                <a class="navbar-brand page-scroll" href="home.html">NamaStudy</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,9 +67,6 @@
                     <li>
                         <a class="page-scroll" href="timer.html">Timer</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="misc.html">Misc</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -84,9 +81,9 @@
                 <div class="intro-heading">Break Time</div>
                 <div class="intro-lead-in">What activites would you like to do today?</div>
                 <div class="dropdown btn-group">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Yoga/Stretches 
+                    <button class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">Yoga/Stretches 
                         <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
+                        <ul id="dp1" class="dropdown-menu">
                             <li><a href="#">Child Pose</a></li>
                             <li><a href="#">Warrior I</a></li>
                             <li><a href="#">Downward Facing Dog</a></li>
@@ -95,9 +92,9 @@
                 <br>
                 <br>
                 <div class="dropdown btn-group">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ab Exercises 
+                    <button class="btn btn-primary dropdown-toggle dp2" type="button" data-toggle="dropdown">Ab Exercises 
                     <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
+                    <ul id="dp2" class="dropdown-menu">
                         <li><a href="#">Prone Plank</a></li>
                         <li><a href="#">Windshield Wiper</a></li>
                         <li><a href="#">Bicycle Crunch</a></li>
@@ -106,9 +103,9 @@
                 <br>
                 <br>
                 <div class="dropdown btn-group">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Walk/Jog
+                    <button class="btn btn-primary dropdown-toggle dp3" type="button" data-toggle="dropdown">Walk/Jog
                     <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
+                    <ul id="dp3" class="dropdown-menu">
                         <li><a href="#">1000 Steps</a></li>
                         <li><a href="#">2000 Steps</a></li>
                         <li><a href="#">3000 Steps</a></li>
@@ -144,7 +141,32 @@
             $(document).ready(function(){
                 $(".dropdown-toggle").dropdown();
             });
-            </script>
+
+             $(function(){
+
+            $("#dp1 li a").click(function(){
+
+              $(".dp1:first-child").text($(this).text());
+              $(".dp1:first-child").val($(this).text());
+
+           });
+
+            $("#dp2 li a").click(function(){
+
+              $(".dp2:first-child").text($(this).text());
+              $(".dp2:first-child").val($(this).text());
+
+           });
+
+            $("#dp3 li a").click(function(){
+
+              $(".dp3:first-child").text($(this).text());
+              $(".dp3:first-child").val($(this).text());
+
+           });
+
+        });
+      </script>
 
 </body>
 

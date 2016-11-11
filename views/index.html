@@ -26,6 +26,10 @@
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
 
+    <style type="text/css">
+
+    </style>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,7 +49,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">NamaStudy</a>
+                <a class="navbar-brand page-scroll" href="home.html">NamaStudy</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,9 +70,6 @@
                     <li>
                         <a class="page-scroll" href="timer.html">Timer</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#">Misc</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -79,31 +80,27 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="form_container">
             <div class="intro-text">
             <h1>NamaStudy</h1>
-                <div class="intro-lead-in">Welcome Back, Jesus!</div>
+                <div class="intro-lead-in">Making studying a good habit, one assignment at a time</div>
                     <div class="jumbotron">
-                        <h3>Past Activities:</h3>
-                        <ul id="past_activities">
-                            <li><a href="">Walk 200 steps</a></li>
-                            <li><a href="">Yoga stretches</a></li>
-                            <li><a href="">20 sit-ups</a></li>
-                        </ul>
-                        <h4>Choose an activity</h4>
-                        <div class="dropdown btn-group btn">
-                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                          Activities
-                          <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Jog for a mile</a></li>
-                            <li><a href="#">Swim 50 yards</a></li>
-                            <li><a href="#">Stretch for 5 minutes</a></li>
-                          </ul>
-                        </div>
+                        
+                      <form action="home.html">
+                          <table align="center">
+                            <tr>
+                              <td align="right">User Name:</td>
+                              <td align="left"><input class="login" type="text" name="first" /></td>
+                            </tr>
+                            <tr>
+                              <td align="right">Password:</td>
+                              <td align="left"><input class="login" type="password" name="pswd" /></td>
+                            </tr>
+                          </table>
+                          <br>
+                          <input class="btn-primary btn-lg" align="center" type="submit" value="Login"></input>
+                        </form>
                     </div>
-                <a href="pickintervals.html" class="page-scroll btn btn-xl">Set Intervals</a>
                 </div>
     </header>
 
@@ -123,11 +120,18 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-    <script>
-    $.getJSON("data.json", function(json) {
-            console.log(json); // this will show the info it in firebug console
+<!--     <script type="text/javascript">
+        $(function(){
+
+            $(".dropdown-menu li a").click(function(){
+
+              $(".btn:first-child").text($(this).text());
+              $(".btn:first-child").val($(this).text());
+
+           });
+
         });
-    </script>
+    </script> -->
 
 </body>
 
