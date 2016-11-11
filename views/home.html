@@ -116,9 +116,10 @@
     <script src="js/agency.min.js"></script>
 
     <script type="text/javascript">
+    
         for(var i in localStorage) {
-    console.log(i + ' = ' + localStorage[i]);
-}
+        console.log(i + ' = ' + localStorage[i]);
+    }
         var usr = JSON.parse(localStorage.getItem('nama_user'));
         $("#greet_user").html("Welcome Back, " + usr.userName);
         //Function for dropdown and switching where the "Choose Activity" button links to

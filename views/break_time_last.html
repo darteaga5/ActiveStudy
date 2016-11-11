@@ -92,7 +92,7 @@
     <script type="text/javascript">
     function saveLog() {
         var tmp = JSON.parse(localStorage.getItem('nama_user'));
-        tmp.log_list.push(event.timeStamp + " - " + $("#text_box").val());
+        tmp.log_list.push(" - " + $("#text_box").val());
         localStorage.setItem('nama_user', JSON.stringify(tmp));
     }
         
