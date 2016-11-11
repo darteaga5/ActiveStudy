@@ -121,7 +121,7 @@
     <script type="text/javascript">
         var usr = JSON.parse(localStorage.getItem('nama_user'));
         alert(usr.userName);
-        alert(document.getElementById("greet_user").value);
+        $("#greet_user").html("Welcome Back, " + usr.userName);
         //Function for dropdown and switching where the "Choose Activity" button links to
         $(".dropdown-menu li a").click(function(){
             
