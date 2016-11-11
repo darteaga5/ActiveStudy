@@ -37,7 +37,7 @@
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,16 +55,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="description.html">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="###">Activity Log</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="index.html">Logout</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="pickintervals.html">Study</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="break.html">Break</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="timer.html">Timer</a>
                     </li>
                 </ul>
             </div>
@@ -97,7 +97,7 @@
                
                 </br>
                 </br>
-                <a href="choose_activity.html" class="page-scroll btn btn-xl" id="toactivity">Choose Activity</a>
+                <a href="choose_activity.html" class="page-scroll btn btn-xl" id="toactivity" onclick="checkValue()"">Choose Activity</a>
             </div>
         </div>
     </header>
@@ -119,28 +119,35 @@
     <script src="js/agency.min.js"></script>
 
     <script type="text/javascript">
-        
         //Function for dropdown and switching where the "Choose Activity" button links to
         $(".dropdown-menu li a").click(function(){
             
             //allows user to choose from dropdown and have selected choice shown
             $(".btn:first-child").text($(this).text());
-            $(".btn:first-child").val($(this).text());
+           var val = $(".btn:first-child").val($(this).text()).val();
 
             //set val to the value of the dropdown
-            var val = $(".btn:first-child").val();
+            //var val = $(".btn:first-child").val();
 
             //set the "Choose Activity" button href to the appropriate page based on dropdown choice
-            if(val == "Yoga/Stretching" ){
+            if(val == "Yoga/Stretching" ) {
                 document.getElementById("toactivity").href="yoga.html";
             }
-            else if(val == "Abs"){
+            else if(val == "Abs") {
                 document.getElementById("toactivity").href="abs.html";
             }
-            else{
+            else if(val == "Walking/Joggin") {
                 document.getElementById("toactivity").href="walkjog.html";
-            }
+            } 
         });
+
+        function checkValue() {
+            var act_chosen = $(".btn:first-child").val();
+            if(act_chosen == '') {
+                alert("You didn't pick an option");
+                document.getElementById("toactivity").href = '#';
+            }
+        }
 
     </script>
 </body>
