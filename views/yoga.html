@@ -82,31 +82,55 @@
                 <font size="3">Check the box of the exercise to complete during your break</font>
                 </br>
                 </br>
-                <!-- Child's Pose -->
-                <font size ="5"><label><input type="radio" name="yoga" id ="chbx_childsPose">  Child's Pose</label></font>
-                <button type="button" class="text" data-toggle="modal" data-target="#childsPose"><u>click here for description</u></button>
-                </br>
-                </br>
+                <form id="myForm">
+                    <!-- Child's Pose -->
+                    <font size ="5"><label><input type="radio" name="yoga" id ="chbx_childsPose" value="Child's Pose">  Child's Pose</label></font>
+                    <button type="button" class="text" data-toggle="modal" data-target="#childsPose"><u>click here for description</u></button>
+                    </br>
+                    </br>
 
-                <!-- Warrior I -->
-                <font size ="5"><label><input type="radio" name="yoga" id ="chkbx_warrior">  Warrior I</label></font> 
-                </br>
-                <button type="button" class="text" data-toggle="modal" data-target="#warrior"><u>click here for description</u></button>
-                </br>
-                </br>
+                    <!-- Warrior I -->
+                    <font size ="5"><label><input type="radio" name="yoga" id ="chkbx_warrior" value="Warrior I">  Warrior I</label></font> 
+                    </br>
+                    <button type="button" class="text" data-toggle="modal" data-target="#warrior"><u>click here for description</u></button>
+                    </br>
+                    </br>
 
-                <!-- Low Lunge -->
-                <font size ="5"><label><input type="radio" name="yoga" id ="chkbx_lung"> Low Lunge</label></font>
-                </br>
-                <button type="button" class="text" data-toggle="modal" data-target="#lunge"><u>click here for example</u></button>
-                </br>
-                </br>
-                <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
+                    <!-- Low Lunge -->
+                    <font size ="5">
+                    <label>
+                    <input type="radio" name="yoga" id ="chkbx_lung" value="Low Lunge"> Low Lunge
+                    </label></font>
+                    </br>
+                    <button type="button" class="text" data-toggle="modal" data-target="#lunge"><u>click here for example</u></button>
+                    </br>
+                    </br>
+                    <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
+                </form>
             </div>
         </div>
     </header>
 
+<!--     <form id="myForm">
+<input type="radio" name="radioName" value="1" /> 1 <br />
+<input type="radio" name="radioName" value="2" /> 2 <br />
+<input type="radio" name="radioName" value="3" /> 3 <br />
+</form> -->
 
+
+    <script type="text/javascript">
+    window.onload = function() {
+        $('#myForm input').on('change', function() {
+          var tmp = JSON.parse(localStorage.getItem('nama_user'));
+          tmp.curr_activity = $('input[name=yoga]:checked', '#myForm').val();
+          localStorage.setItem('nama_user', JSON.stringify(tmp));
+        //   for(var i in localStorage) {
+        //     console.log(i + ' = ' + localStorage[i]);
+        // }
+        });
+    }
+        
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 

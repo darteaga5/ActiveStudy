@@ -84,6 +84,17 @@
                     </div>
     </header>
 
+    <script type="text/javascript">
+    window.onload = function() {
+
+    var tmp = JSON.parse(localStorage.getItem('nama_user'));
+    for(var i = 0; i < tmp.log_list.length; i++) {
+
+        $(".jumbotron").append(tmp.log_list[i] +"<br><br>");
+     }
+    }
+    
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 

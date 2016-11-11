@@ -81,23 +81,25 @@
                 <font size="3">Check the box of the exercise to complete during your break</font>
                 </br> </br>
 
+            <form id="myForm">
                 <!-- Prone Plank -->
-                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_plank"> Prone Plank</label></font>
+                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_plank" value="Prone Plank"> Prone Plank</label></font>
                 </br>
                 <button type="button" class="text" data-toggle="modal" data-target="#plank"><u>click here for description</u></button>
                 </br> </br>
                 
                 <!-- Windshield Wiper -->
-                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_windshield"> Windshield Wiper</label></font>
+                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_windshield" value="Windshield Wiper"> Windshield Wiper</label></font>
                 </br>
                 <button type="button" class="text" data-toggle="modal" data-target="#windshield"><u>click here for description</u></button> 
                 </br></br>
 
                 <!-- Bicycle Crunches -->
-                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_bicycle"> Bicycle Crunches</label></font>
+                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_bicycle" value="Bicycle Crunches"> Bicycle Crunches</label></font>
                 </br>
                 <button type="button" class="text" data-toggle="modal" data-target="#bicycle"><u>click here for description</u></button>
                 </br>
+            </form>
                 
                 </br>
                 <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
@@ -105,7 +107,19 @@
         </div>
     </header>
 
-
+    <script type="text/javascript">
+    window.onload = function() {
+        $('#myForm input').on('change', function() {
+          var tmp = JSON.parse(localStorage.getItem('nama_user'));
+          tmp.curr_activity = $('input[name=abs]:checked', '#myForm').val();
+          localStorage.setItem('nama_user', JSON.stringify(tmp));
+        //   for(var i in localStorage) {
+        //     console.log(i + ' = ' + localStorage[i]);
+        // }
+        });
+    }
+        
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
