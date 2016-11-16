@@ -59,7 +59,7 @@
                         <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="###">Activity Log</a>
+                        <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html">Logout</a>
@@ -82,27 +82,41 @@
                 <font size="3">Check the box of the exercise to complete during your break</font>
                 </br>
                 </br>
+            <form id="myForm">
                 <!-- 1000 steps -->
-                <font size ="5"><label><input type="checkbox" id ="chkbx_dog"> 1000 steps </label></font>
+                <font size ="5"><label><input type="radio" name="walk" id ="chkbx_dog" value="1000 steps"> 1000 steps </label></font>
                 </br>
                 </br>
 
                 <!-- 2000 steps -->
-                <font size ="5"><label><input type="checkbox" id ="chkbx_dog"> 2000 steps </label></font>
+                <font size ="5"><label><input type="radio" name="walk" id ="chkbx_dog" value="2000 steps"> 2000 steps </label></font>
                  </br>
                  </br>
 
                 <!-- 3000 steps -->
-                <font size ="5"> <label> <input type="checkbox" id ="chkbx_dog"> 3000 steps </label></font>
+                <font size ="5"> <label> <input type="radio" name="walk" id ="chkbx_dog" value="2000 steps"> 3000 steps </label></font>
                 </br>
                 </br>
+            </form>
 
                 <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
             </div>
         </div>
     </header>
 
-
+    <script type="text/javascript">
+    window.onload = function() {
+        $('#myForm input').on('change', function() {
+          var tmp = JSON.parse(localStorage.getItem('nama_user'));
+          tmp.curr_activity = $('input[name=walk]:checked', '#myForm').val();
+          localStorage.setItem('nama_user', JSON.stringify(tmp));
+        //   for(var i in localStorage) {
+        //     console.log(i + ' = ' + localStorage[i]);
+        // }
+        });
+    }
+        
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 

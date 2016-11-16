@@ -40,8 +40,9 @@
         var timeWork = getURLParameter('workintid') * 60;
         display = document.querySelector('#time');
         
-        
-        localStorage.setItem('timer', getURLParameter('breakid'));
+        var tmp = JSON.parse(localStorage.getItem('nama_user'));
+        tmp.timer = getURLParameter('breakid');
+        localStorage.setItem('nama_user', JSON.stringify(tmp));
 
         startTimer(timeWork, display);
     };

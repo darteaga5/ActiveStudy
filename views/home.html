@@ -61,7 +61,7 @@
                         <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="###">Activity Log</a>
+                        <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html">Logout</a>
@@ -79,12 +79,9 @@
         <div class="container">
             <div class="intro-text">
                 <h1>NamaStudy</h1>
-                <div class="intro-lead-in">Welcome Back, Jesus!</div>
-                    <div class="jumbotron">
-                        <h4># of past breaks: (add breaks)</h4>
-                        <h4># of past Work Intervals: (add)</h4>
-                        <h4>Most used break Activity: (add)</h4>
-                    </div>
+                <div id="greet_user" class="intro-lead-in">Welcome Back, Jesus!</div>
+                    <a href="activitylog.html" class="page-scroll btn btn-xl">view acitivty log</a>    
+                    <h2>-OR-</h2>
                 <div class="dropdown btn-group">
                     <button id="ddlist" class="btn btn-primary dropdown-toggle dp1" type="button" data-toggle="dropdown">
                     Select Activity Category <span class="caret"></span></button>
@@ -97,7 +94,7 @@
                
                 </br>
                 </br>
-                <a href="choose_activity.html" class="page-scroll btn btn-xl" id="toactivity" onclick="checkValue()"">Choose Activity</a>
+                <a href="choose_activity.html" class="page-scroll btn btn-xl" id="toactivity" onclick="checkValue()">Choose Activity</a>
             </div>
         </div>
     </header>
@@ -119,6 +116,11 @@
     <script src="js/agency.min.js"></script>
 
     <script type="text/javascript">
+        for(var i in localStorage) {
+    console.log(i + ' = ' + localStorage[i]);
+}
+        var usr = JSON.parse(localStorage.getItem('nama_user'));
+        $("#greet_user").html("Welcome Back, " + usr.userName);
         //Function for dropdown and switching where the "Choose Activity" button links to
         $(".dropdown-menu li a").click(function(){
             
@@ -136,7 +138,7 @@
             else if(val == "Abs") {
                 document.getElementById("toactivity").href="abs.html";
             }
-            else if(val == "Walking/Joggin") {
+            else if(val == "Walking/Jogging") {
                 document.getElementById("toactivity").href="walkjog.html";
             } 
         });
@@ -148,6 +150,8 @@
                 document.getElementById("toactivity").href = '#';
             }
         }
+
+            
 
     </script>
 </body>

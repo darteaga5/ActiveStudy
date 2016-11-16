@@ -1,38 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-   
+
     <title>NamaStudy</title>
 
-    <style>
-        body{
-            padding: 10px;
-        }
-    </style>
-
-<!--     This is where the values are getting stored from the form in pickintervals -->
-    <script type="text/javascript" src="./js/timer_display.js"></script>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-  
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-          
-    <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -41,11 +19,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>d>
-    
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
-   
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,7 +34,8 @@
 </head>
 
 <body id="page-top" class="index">
-    <!-- Navigation -->
+
+       <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -91,22 +70,47 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-  
+
+
     <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
-                <h1>Time Until Break</h1>
-                <h1> <span id="time"></span></h1>
-            </div>
-        </div>
-        <form action="pickintervals.html">
-           <h3> <input class="btn-primary" type="submit" value="Reset Intervals" /></h3>
-        </form>
-        <form action="startbreak.html">
-           <h3> <input class="btn-primary" type="submit" value="Take Break Now" /></h3>
-            <p>(Try to stick to your planned intervals)</p>
-        </form>
+            <h1>Activity Log</h1>
+            <h5>All of your previous logged exercises are listed below</h5>
+                    </br>
+                    <div class="jumbotron">
+                      
+                    </div>
     </header>
+
+    <script type="text/javascript">
+    window.onload = function() {
+
+    var tmp = JSON.parse(localStorage.getItem('nama_user'));
+    for(var i = 0; i < tmp.log_list.length; i++) {
+
+        $(".jumbotron").append(tmp.log_list[i] +"<br><br>");
+     }
+    }
+    
+    </script>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+
+</body>
 
 </html>

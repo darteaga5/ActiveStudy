@@ -65,7 +65,7 @@
                         <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="###">Activity Log</a>
+                        <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html">Logout</a>
@@ -89,14 +89,14 @@
                       <form action="home.html">
                           <table align="center">
                             <tr>
-                              <td align="left"><input class="login" type="text" name="first" placeholder=" Username" /></td>
+                              <td align="left"><input id="login_name" class="login" type="text" name="first" placeholder=" Username" /></td>
                             </tr>
                             <tr>
-                              <td align="left"><input class="login" type="password" name="pswd" placeholder=" Password" /></td>
+                              <td align="left"><input id="login_passwd" class="login" type="password" name="pswd" placeholder=" Password" /></td>
                             </tr>
                           </table>
                           <br>
-                          <input class="btn-primary btn-lg" align="center" type="submit" value="      Login      "></input>
+                          <input id="login_bttn" class="btn-primary btn-lg" align="center" type="submit" value="      Login      " onclick="verifyCredentials()"></input>
                         </form>
                         <!--
                         <form action="createaccount.html">
@@ -131,18 +131,41 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-<!--     <script type="text/javascript">
-        $(function(){
 
-            $(".dropdown-menu li a").click(function(){
+    <script type="text/javascript">
 
-              $(".btn:first-child").text($(this).text());
-              $(".btn:first-child").val($(this).text());
 
-           });
+    //localStorage.clear();
+        // for(var i in localStorage) {
+        //     console.log(i + ' = ' + localStorage[i]);
+        // }
 
-        });
-    </script> -->
+        function verifyCredentials() {
+            var login_name = $("#login_name").val();
+            var passwd = $("#login_passwd").val();
+            //alert(login_name + " " + passwd);
+
+            if(login_name == '') {
+                alert("Please type your user name");
+                document.getElementById("login_bttn").setAttribute('type', 'button');
+                //return false;
+            } else {
+                curr_usr = JSON.parse(localStorage.getItem('nama_user'));
+                if(curr_usr.userName != login_name) {
+                    alert("User does not exists");
+                    document.getElementById("login_bttn").setAttribute('type', 'button');
+                } else if(curr_usr.userName == login_name) {
+                    if(curr_usr.password != passwd) {
+                        alert("Password is incorrect");
+                        $("#login_passwd").val('');
+                        document.getElementById("login_bttn").setAttribute('type', 'button');
+                    } else {
+                        document.getElementById("login_bttn").setAttribute('type', 'submit');
+                    }
+                }
+            }
+        }
+    </script>
 
 </body>
 

@@ -65,7 +65,7 @@
                         <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="###">Activity Log</a>
+                        <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html">Logout</a>
@@ -92,7 +92,7 @@
                               <td align="left"><input id="usr_name" class="login" type="text" name="first" placeholder=" Username" /></td>
                             </tr>
                             <tr>
-                              <td align="left"><input class="login pswd" type="password" name="pswd" placeholder=" Password" /></td>
+                              <td align="left"><input id="password" class="login pswd" type="password" name="pswd" placeholder=" Password" /></td>
                             </tr>
                             <tr>
                               <td align="left"><input class="login pswd" type="password" name="pswd" placeholder=" Retype Password" /></td>
@@ -106,7 +106,13 @@
     </header>
 
     <script type="text/javascript">
-        function checkUsrNpass(e) {
+        function checkUsrNpass() {
+            var usr_obj = {
+                userName: "",
+                password: "",
+                log_list: [],
+                curr_activity: ""
+            };
             var usrName = $("#usr_name").val();
             var button_account = document.getElementById("create_button");
 
@@ -114,6 +120,8 @@
             alert("Please input a User Name");
             button_account.setAttribute('type', 'button');
         } else {
+            usr_obj.userName = usrName;
+            //alert("The user name is " + usr_obj.userName);
             button_account.setAttribute('type', 'submit');
         }
 
@@ -128,9 +136,11 @@
             alert("Your password did not match");
             button_account.setAttribute('type', 'button');
         } else if(passwd[0].value == passwd[1].value) {
+            usr_obj.password = passwd[0].value;
             button_account.setAttribute('type', 'submit');
         }
 
+        localStorage.setItem('nama_user', JSON.stringify(usr_obj));
     }
     </script>
     <!-- jQuery -->
@@ -149,19 +159,10 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
-<!--     <script type="text/javascript">
-        $(function(){
-
-            $(".dropdown-menu li a").click(function(){
-
-              $(".btn:first-child").text($(this).text());
-              $(".btn:first-child").val($(this).text());
-
-           });
-
-        });
-    </script> -->
-
+    <script>
+        var user = {username:"", password:"", workint:"", breakint:""};
+        user[0]
+    </script>
 </body>
 
 </html>

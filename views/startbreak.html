@@ -62,7 +62,7 @@
                         <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="###">Activity Log</a>
+                        <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html">Logout</a>
@@ -81,8 +81,8 @@
                 <div class="intro-heading">Break Time</div>
                 </br>
                 </br>
-                <h3>You chose _____ as your break activity</h3>
-                <h3>Your break is __:__ minutes</h3>
+                <h3 id="you_picked">You chose _____ as your break activity</h3>
+                <h3 id="break_time">Your break is __:__ minutes</h3>
             </div>
                 </br>
                 </br>
@@ -91,7 +91,11 @@
         </div>
     </header>
 
-
+    <script type="text/javascript">
+        var usr = JSON.parse(localStorage.getItem('nama_user'));
+        $("#you_picked").html("You chose " + usr.curr_activity + " as your break activity");
+        $("#break_time").html("Your break is " + usr.timer + " minutes");
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 

@@ -59,7 +59,7 @@
                         <a class="page-scroll" href="description.html">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="###">Activity Log</a>
+                        <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="index.html">Logout</a>
@@ -80,23 +80,26 @@
                 </br></br>
                 <font size="3">Check the box of the exercise to complete during your break</font>
                 </br> </br>
+
+            <form id="myForm">
                 <!-- Prone Plank -->
-                <font size ="5"><label><input type="checkbox" id ="chkbx_plank"> Prone Plank</label></font>
+                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_plank" value="Prone Plank"> Prone Plank</label></font>
                 </br>
                 <button type="button" class="text" data-toggle="modal" data-target="#plank"><u>click here for description</u></button>
                 </br> </br>
                 
                 <!-- Windshield Wiper -->
-                <font size ="5"><label><input type="checkbox" id ="chkbx_windshield"> Windshield Wiper</label></font>
+                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_windshield" value="Windshield Wiper"> Windshield Wiper</label></font>
                 </br>
                 <button type="button" class="text" data-toggle="modal" data-target="#windshield"><u>click here for description</u></button> 
                 </br></br>
 
                 <!-- Bicycle Crunches -->
-                <font size ="5"><label><input type="checkbox" id ="chkbx_bicycle"> Bicycle Crunches</label></font>
+                <font size ="5"><label><input type="radio" name="abs" id ="chkbx_bicycle" value="Bicycle Crunches"> Bicycle Crunches</label></font>
                 </br>
                 <button type="button" class="text" data-toggle="modal" data-target="#bicycle"><u>click here for description</u></button>
                 </br>
+            </form>
                 
                 </br>
                 <a href="pickintervals.html" class="page-scroll btn btn-xl">Choose Intervals</a>
@@ -104,7 +107,19 @@
         </div>
     </header>
 
-
+    <script type="text/javascript">
+    window.onload = function() {
+        $('#myForm input').on('change', function() {
+          var tmp = JSON.parse(localStorage.getItem('nama_user'));
+          tmp.curr_activity = $('input[name=abs]:checked', '#myForm').val();
+          localStorage.setItem('nama_user', JSON.stringify(tmp));
+        //   for(var i in localStorage) {
+        //     console.log(i + ' = ' + localStorage[i]);
+        // }
+        });
+    }
+        
+    </script>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -120,7 +135,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-
+    
 </body>
 
 <!--Prone Plank Modal -->
@@ -133,7 +148,8 @@
                <h4 class="modal-title">Prone Plank</h4>
             </div>
             <div class="modal-body">
-                <p>Pictures of exersize </p>
+                 <!--http://us.myprotein.com/thezone/training/plank-position-exercise-benefits/-->
+                 <img src="./img/prone.jpg" id="windpreview" style="width: 200px; height: 120px;" >
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
@@ -152,7 +168,8 @@
                <h4 class="modal-title"> Windshield Wiper</h4>
             </div>
             <div class="modal-body">
-                <p>Pictures of exersize </p>
+                <!--https://s-media-cache-ak0.pinimg.com/236x/bb/bb/9e/bbbb9e314d54fe4282ac01430e8e1197.jpg-->
+                <img src="./img/windshield.jpg" style="width: 250px; height: 120px;" >
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
@@ -171,7 +188,8 @@
                <h4 class="modal-title">Bicycle Crunch</h4>
             </div>
             <div class="modal-body">
-                <p>Pictures of exersize </p>
+                <!--https://s-media-cache-ak0.pinimg.com/236x/bb/bb/9e/bbbb9e314d54fe4282ac01430e8e1197.jpg-->
+                <img src="./img/bicycle.jpg" id="windpreview" style="width: 220px; height: 260px;" >
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
