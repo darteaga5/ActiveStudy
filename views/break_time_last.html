@@ -62,7 +62,7 @@
                         <a class="page-scroll" href="activitylog.html">Activity Log</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html">Logout</a>
+                        <a class="page-scroll" href="index.html" onclick="localStorage.removeItem('guest')">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -91,9 +91,15 @@
 
     <script type="text/javascript">
     function saveLog() {
-        var tmp = JSON.parse(localStorage.getItem('nama_user'));
-        tmp.log_list.push(" - " + $("#text_box").val());
-        localStorage.setItem('nama_user', JSON.stringify(tmp));
+        var usr = JSON.parse(localStorage.getItem('guest'));
+        if(usr == null ) {
+            usr = JSON.parse(localStorage.getItem('nama_user'));
+            usr.log_list.push(new Date(new Date().getTime()).toLocaleDateString() + " - " + $("#text_box").val());
+            localStorage.setItem('nama_user', JSON.stringify(usr));
+        } else {
+            usr.log_list.push(new Date(new Date().getTime()).toLocaleDateString() + " - " + $("#text_box").val());
+            localStorage.setItem('guest', JSON.stringify(usr));
+        }
     }
         
     </script>
