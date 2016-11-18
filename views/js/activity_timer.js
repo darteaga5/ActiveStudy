@@ -36,16 +36,16 @@
 
     //function to implement the timer
     window.onload = function(){
+        var breakTime_tmp = JSON.parse(localStorage.getItem('nama_user'));
+        var breakTime = breakTime_tmp.timer * 60;
+        display = document.querySelector('#time_t');
         
 
-        var timeWork = localStorage.getItem('timer')*60;
-        display = document.querySelector('#time_t');
-        startTimer(timeWork, display);
-
+        startTimer(breakTime, display);
     };
-    
+    var tmp = JSON.parse(localStorage.getItem('nama_user'));
     //set time to switch to other page
-    setTimeout(function(){window.location.href='break_time_last.html'}, localStorage.getItem('timer')*60000);
+    setTimeout(function(){window.location.href='break_time_last.html'}, tmp.timer * 60000);
 
     //function to get parameters passed in
     function getURLParameter(name) {

@@ -108,7 +108,7 @@
             var timer_inputs = document.getElementsByClassName("form-control");
             var bttn = document.getElementById("sub_button");
             if(isNaN(timer_inputs[0].value) || isNaN(timer_inputs[1].value)) {
-                alert("Please enter a valid number");
+                alert("No text allowed, please input ONLY numbers in the amount of minutes");
                 bttn.setAttribute('type', 'button');
                 timer_inputs[0].value = '';
                 timer_inputs[1].value = '';
