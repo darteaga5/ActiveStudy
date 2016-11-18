@@ -36,14 +36,26 @@
 
     //function to implement the timer
     window.onload = function(){
-        var breakTime_tmp = JSON.parse(localStorage.getItem('nama_user'));
-        var breakTime = breakTime_tmp.timer * 60;
-        display = document.querySelector('#time_t');
+        var breakTime;
+        var breakTime_tmp = JSON.parse(localStorage.getItem('guest'));
+        if(breakTime_tmp == null) {
+            breakTime_tmp = JSON.parse(localStorage.getItem('nama_user'));
+            breakTime = breakTime_tmp.timer * 60;
+            display = document.querySelector('#time_t');
+        } else {
+            breakTime = breakTime_tmp.timer * 60;
+            display = document.querySelector('#time_t');
+        }
+        
         
 
         startTimer(breakTime, display);
     };
-    var tmp = JSON.parse(localStorage.getItem('nama_user'));
+
+    var tmp = JSON.parse(localStorage.getItem('guest'));
+    if(tmp == null) {
+        tmp = JSON.parse(localStorage.getItem('nama_user'));
+    }
     //set time to switch to other page
     setTimeout(function(){window.location.href='break_time_last.html'}, tmp.timer * 60000);
 

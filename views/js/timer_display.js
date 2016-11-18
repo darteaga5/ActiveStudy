@@ -40,9 +40,16 @@
         var timeWork = getURLParameter('workintid') * 60;
         display = document.querySelector('#time');
         
-        var tmp = JSON.parse(localStorage.getItem('nama_user'));
-        tmp.timer = getURLParameter('breakid');
-        localStorage.setItem('nama_user', JSON.stringify(tmp));
+         var usr = JSON.parse(localStorage.getItem('guest'));
+        if(usr == null ) {
+            usr = JSON.parse(localStorage.getItem('nama_user'));
+            usr.timer = getURLParameter('breakid');
+            localStorage.setItem('nama_user', JSON.stringify(usr));
+        } else {
+            usr.timer = getURLParameter('breakid');
+            localStorage.setItem('guest', JSON.stringify(usr));
+        }
+        
 
         startTimer(timeWork, display);
     };
