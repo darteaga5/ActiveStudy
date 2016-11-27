@@ -18,6 +18,7 @@
 
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,7 @@
     <meta name="author" content="">
    
     <title>NamaStudy</title>
-                  
+    
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -49,6 +50,7 @@
 </head>
 
 <body id="page-top" class="index">
+
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -57,7 +59,10 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="home.html">NamaStudy</a>
+                <div class="container"> 
+                            <span id="home_icon" class="glyphicon glyphicon-home glyphicon-large"> </span>
+                            <a class="navbar-brand page-scroll" href="home.html"> NamaStudy </a>
+                </div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -91,9 +96,9 @@
             <form action="./startwork.html" method="GET" id="activityForm">
             <div class="intro-text">
             <h2>Select work interval</h2>
-            <input class="form-control" type="text" name="workintid" placeholder="work interval (min)">
+            <input class="form-control" type="text" name="workintid" placeholder="interval min e.g. 5">
             <h2>Select break interval</h2>
-            <input class="form-control" type="text" name="breakid" placeholder="break interval (min)">
+            <input class="form-control" type="text" name="breakid" placeholder="break min e.g. 5">
             </br>
              <h2><input id="sub_button" class="btn-primary" type="submit" value="Submit"onclick="checkTimer()"></h2>
             </form>

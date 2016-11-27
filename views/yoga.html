@@ -43,7 +43,10 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="home.html">NamaStudy</a>
+                <div class="container"> 
+                            <span id="home_icon" class="glyphicon glyphicon-home glyphicon-large"> </span>
+                            <a class="navbar-brand page-scroll" href="home.html"> NamaStudy </a>
+                </div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,14 +88,15 @@
                 <form id="myForm">
                     <!-- Child's Pose -->
                     <font size ="5"><label><input type="radio" name="yoga" id ="chbx_childsPose" value="Child's Pose">  Child's Pose</label></font>
-                    <button type="button" class="text" data-toggle="modal" data-target="#childsPose"><u>click here for description</u></button>
+                    <br>
+                    <button type="button" class="btn-primary" data-toggle="modal" data-target="#childsPose">Description</button>
                     </br>
                     </br>
 
                     <!-- Warrior I -->
                     <font size ="5"><label><input type="radio" name="yoga" id ="chkbx_warrior" value="Warrior I">  Warrior I</label></font> 
                     </br>
-                    <button type="button" class="text" data-toggle="modal" data-target="#warrior"><u>click here for description</u></button>
+                    <button type="button" class="btn-primary" data-toggle="modal" data-target="#warrior">Description</button>
                     </br>
                     </br>
 
@@ -102,7 +106,7 @@
                     <input type="radio" name="yoga" id ="chkbx_lung" value="Low Lunge"> Low Lunge
                     </label></font>
                     </br>
-                    <button type="button" class="text" data-toggle="modal" data-target="#lunge"><u>click here for example</u></button>
+                    <button type="button" class="btn-primary" data-toggle="modal" data-target="#lunge">Description</button>
                     </br>
                     </br>
                     <a href="pickintervals.html" onclick = "checkActivity()" class="page-scroll btn btn-xl">Choose Intervals</a>
@@ -164,7 +168,8 @@
             </div>
             <div class="modal-body">
                 <!--http://kristinmcgee.com/unwind-your-body-mind-with-this-peaceful-yoga-sequence/extended-childs-pose-->
-                <img src="./img/childspose.jpg" style="width: 250px; height: 200px;" >
+                <center><img src="./img/childspose.jpg" style="width: 250px; height: 200px;" ></center>
+                <p>Start in a kneeling position. Drop your butt toward your heels as you stretch the rest of your body down and forward.In the fully stretched position, rest your arms in a relaxed position along the floor, rest your stomach comfortably on top of your thighs, and rest your forehead on the mat. </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
@@ -183,7 +188,8 @@
             </div>
             <div class="modal-body">
                 <!--http://www.lovemyyoga.com/images/Warrior1.jpg-->
-                <img src="./img/warrior.jpg" style="width: 250px; height: 140px;" >
+                <center><img src="./img/warrior.jpg" style="width: 250px; height: 140px;" ></center>
+                <p>Begin with both hands and feet pressed firmly into the floor. Then step your right foot forward between your hands. Turn your left heel in, press into your feet, and lift your torso up. Once your hips are square, lift your arms up, and press your palms together. Stay here for five breaths.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
@@ -203,7 +209,8 @@
             </div>
             <div class="modal-body">
                 <!--http://yogamagz.com/yoga-poses-low-lunge-anjaneyasana-->
-                <img src="./img/lunge.jpg" style="width: 200px; height: 160px;" >
+                <center><img src="./img/lunge.jpg" style="width: 200px; height: 160px;" ></center>
+                <p>Reach your pinkies toward the ceiling. Hold for a minute, exhale your torso back to the right thigh and your hands to the floor, and turn your back toes under. With another exhale, lift your left knee off the floor and step back to Adho Mukha Svanasana. Repeat with the left foot forward for the same length of time.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>

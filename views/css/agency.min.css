@@ -313,3 +313,13 @@ img::selection {
 img::-moz-selection {
     background: 0 0
 }
+
+span#home_icon{
+    position: absolute;
+    left: 0.5;
+    min-height:  48px;
+    line-height: 48px;
+    color: #1194A9;
+    font-size: 15px;
+}
+
