@@ -13,12 +13,13 @@
 
     <title>NamaStudy</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"><a class="page-scroll" href="index.html" onclick="localStorage.removeItem('guest')">Logout</a>
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -35,7 +36,12 @@
 
 </head>
 
+
 <body id="page-top" class="index">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNH8TP4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
         <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -44,8 +50,16 @@
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="home.html">NamaStudy</a>
+
+                </button> 
+     				
+  					<div class="container"> 
+  							<span id="home_icon" class="glyphicon glyphicon-home glyphicon-large"> </span>
+  							<a class="navbar-brand page-scroll" href="home.html"> NamaStudy </a>
+  					</div>
+  					  
+     					
+     					
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,12 +93,12 @@
         <div class="container">
             <div class="intro-text">
                 <h1>NamaStudy</h1>
-                <div id="greet_user" class="intro-lead-in">Welcome</div>
-                    <a href="activitylog.html" class="page-scroll btn btn-primary btn-lg">view activity log</a>    
+                <div id="greet_user" class="intro-lead-in">Welcome!</div>
+                    <a href="activitylog.html" class="btn-primary btn btn-lg">view activity log</a>    
                     <h2>-OR-</h2>
                 <div class="dropdown btn-group">
                     <button id="ddlist" class="btn btn-primary btn-lg dropdown-toggle dp1" type="button" data-toggle="dropdown">
-                    Select Activity Category <span  class="glyphicon glyphicon-menu-down drop_down_icon" aria-hidden="true"></span></button>
+                    Select Activity Category <span class="caret"></span></button>
                     <ul id="ddactivity" class="dropdown-menu">
                         <li value="0"><a href="#">Yoga/Stretching</a></li>
                         <li value="1"><a href="#">Abs</a></li>
@@ -94,7 +108,7 @@
                
                 </br>
                 </br>
-                <a href="choose_activity.html" class="btn-primary btn-lg" id="toactivity" onclick="checkValue()">Continue</a>
+                <a href="choose_activity.html" class="btn-primary btn-sm" id="toactivity" onclick="checkValue()">Continue</a>
             </div>
         </div>
     </header>
@@ -116,20 +130,11 @@
     <script src="js/agency.min.js"></script>
 
     <script type="text/javascript">
-       
-    //Display objects
         for(var i in localStorage) {
-            console.log(i + ' = ' + localStorage[i]);
-        }
-
-        var usr = JSON.parse(localStorage.getItem('guest'));
-        if(usr == null ) {
-            usr = JSON.parse(localStorage.getItem('nama_user'));
-            $("#greet_user").html("Welcome Back, " + usr.userName);
-        } else {
-            $("#greet_user").html("Welcome" + usr.userName);
-        }
-        
+    console.log(i + ' = ' + localStorage[i]);
+}
+        var usr = JSON.parse(localStorage.getItem('nama_user'));
+        $("#greet_user").html("Welcome Back, " + usr.userName);
         //Function for dropdown and switching where the "Choose Activity" button links to
         $(".dropdown-menu li a").click(function(){
             

@@ -20,6 +20,17 @@ body {
     background-attachment: fixed;
     background-position: center; 
 }
+.drop_down_icon {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  
+}
+#ddlist {
+    text-align: center;
+  margin: auto;
+}
+
 .btn-primary,
 .btn-xl,
 h1,
