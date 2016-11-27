@@ -2,32 +2,7 @@
 <html lang="en">
 
 <head>
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TNH8TP4');</script>
-<!-- End Google Tag Manager -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>NamaStudy</title>
-
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-87770411-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -51,10 +26,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body id="page-top" class="index">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNH8TP4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
        <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -103,11 +74,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <div class="intro-text">
             <h1>Log your activity</h1>
-            <h4>e.g. 15 crunches, 20 pushups, 100 steps</h4>
-                    </br>
                     <div class="jumbotron">
                       
-                      <textarea id="text_box" name="log_info" form="log_form" placeholder="Please put your workout details here!"></textarea>
+                      <textarea rows="4" id="text_box" name="log_info" form="log_form" placeholder="e.g. In my 5 minute break I was able to do 50 bicycle crunches."></textarea>
                       <form id="log_form" action="home.html">
                           <input class="btn-primary" type="submit" name="submit" onclick="saveLog()">
                           <input class="btn-primary" type="button" name="skip" value="skip" onclick="window.location.href='home.html'">
